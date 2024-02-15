@@ -1,11 +1,11 @@
-module github.com/krakendio/krakend-jose/v2
+module github.com/davron112/krakend-jose/v2
 
 go 1.17
 
 require (
 	github.com/gin-gonic/gin v1.8.2
 	github.com/krakend/go-auth0 v1.0.0
-	github.com/luraproject/lura/v2 v2.0.5
+	github.com/davron112/lura/v2 v2.0.5
 	gocloud.dev v0.28.0
 	gocloud.dev/secrets/hashivault v0.28.0
 	gopkg.in/square/go-jose.v2 v2.6.0
@@ -75,7 +75,7 @@ require (
 	github.com/hashicorp/yamux v0.1.1 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/krakendio/flatmap v1.1.1 // indirect
+	github.com/davron112/flatmap v1.1.1 // indirect
 	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect

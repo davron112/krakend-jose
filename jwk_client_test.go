@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/davron112/lura/v2/config"
+	"github.com/davron112/lura/v2/logging"
 	"github.com/krakend/go-auth0"
-	"github.com/luraproject/lura/v2/config"
-	"github.com/luraproject/lura/v2/logging"
 )
 
 func TestJWKClient_globalCache(t *testing.T) {

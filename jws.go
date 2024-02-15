@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/davron112/lura/v2/config"
 	"github.com/krakend/go-auth0"
-	"github.com/luraproject/lura/v2/config"
 	jose "gopkg.in/square/go-jose.v2"
 )
 

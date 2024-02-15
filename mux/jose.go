@@ -8,12 +8,12 @@ import (
 	"net/http"
 	"strings"
 
+	krakendjose "github.com/davron112/krakend-jose/v2"
+	"github.com/davron112/lura/v2/config"
+	"github.com/davron112/lura/v2/logging"
+	"github.com/davron112/lura/v2/proxy"
+	muxlura "github.com/davron112/lura/v2/router/mux"
 	"github.com/krakend/go-auth0"
-	krakendjose "github.com/krakendio/krakend-jose/v2"
-	"github.com/luraproject/lura/v2/config"
-	"github.com/luraproject/lura/v2/logging"
-	"github.com/luraproject/lura/v2/proxy"
-	muxlura "github.com/luraproject/lura/v2/router/mux"
 	"gopkg.in/square/go-jose.v2/jwt"
 )
 
