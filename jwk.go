@@ -18,11 +18,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/davron112/lura/v2/core"
-	auth0 "github.com/krakend/go-auth0"
-	jose "gopkg.in/square/go-jose.v2"
-
+	auth0 "github.com/davron112/go-auth0"
 	"github.com/davron112/krakend-jose/v2/secrets"
+	"github.com/davron112/lura/v2/core"
+	jose "gopkg.in/square/go-jose.v2"
 )
 
 type SecretProviderConfig struct {

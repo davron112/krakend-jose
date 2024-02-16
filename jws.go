@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/davron112/go-auth0"
 	"github.com/davron112/lura/v2/config"
-	"github.com/krakend/go-auth0"
 	jose "gopkg.in/square/go-jose.v2"
 )
 
@@ -19,7 +19,6 @@ const (
 
 type SignatureConfig struct {
 	Alg                     string     `json:"alg"`
-	AuthHeaderName          string     `json:"auth_header_name,omitempty"`
 	URI                     string     `json:"jwk_url"`
 	CacheEnabled            bool       `json:"cache,omitempty"`
 	CacheDuration           uint32     `json:"cache_duration,omitempty"`
@@ -47,7 +46,6 @@ type SignatureConfig struct {
 type SignerConfig struct {
 	Alg                string   `json:"alg"`
 	KeyID              string   `json:"kid"`
-	Type               string   `json:"typ"`
 	URI                string   `json:"jwk_url"`
 	FullSerialization  bool     `json:"full,omitempty"`
 	KeysToSign         []string `json:"keys_to_sign,omitempty"`
@@ -141,11 +139,7 @@ func NewSigner(cfg *config.EndpointConfig, te auth0.RequestTokenExtractor) (*Sig
 	opts := &jose.SignerOptions{
 		ExtraHeaders: map[jose.HeaderKey]interface{}{
 			jose.HeaderKey("kid"): key.KeyID,
-			jose.HeaderKey("typ"): "JWT",
 		},
-	}
-	if signerCfg.Type != "" {
-		opts.ExtraHeaders[jose.HeaderKey("typ")] = signerCfg.Type
 	}
 	s, err := jose.NewSigner(signingKey, opts)
 	if err != nil {

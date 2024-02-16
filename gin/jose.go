@@ -7,13 +7,13 @@ import (
 	"regexp"
 	"strings"
 
+	auth0 "github.com/davron112/go-auth0"
 	krakendjose "github.com/davron112/krakend-jose/v2"
 	"github.com/davron112/lura/v2/config"
 	"github.com/davron112/lura/v2/logging"
 	"github.com/davron112/lura/v2/proxy"
 	ginlura "github.com/davron112/lura/v2/router/gin"
 	"github.com/gin-gonic/gin"
-	auth0 "github.com/krakend/go-auth0"
 	"gopkg.in/square/go-jose.v2/jwt"
 )
 
@@ -87,7 +87,7 @@ func TokenSignatureValidator(hf ginlura.HandlerFactory, logger logging.Logger, r
 			return erroredHandler
 		}
 
-		validator, err := krakendjose.NewValidator(scfg, FromCookie, FromHeader)
+		validator, err := krakendjose.NewValidator(scfg, FromCookie)
 		if err != nil {
 			logger.Fatal(logPrefix, "Unable to create the validator:", err.Error())
 			return erroredHandler
@@ -237,21 +237,5 @@ func FromCookie(key string) func(r *http.Request) (*jwt.JSONWebToken, error) {
 			return nil, auth0.ErrTokenNotFound
 		}
 		return jwt.ParseSigned(cookie.Value)
-	}
-}
-
-func FromHeader(header string) func(r *http.Request) (*jwt.JSONWebToken, error) {
-	if header == "" {
-		header = "Authorization"
-	}
-	return func(r *http.Request) (*jwt.JSONWebToken, error) {
-		raw := r.Header.Get(header)
-		if len(raw) > 7 && strings.EqualFold(raw[0:7], "BEARER ") {
-			raw = raw[7:]
-		}
-		if raw == "" {
-			return nil, auth0.ErrTokenNotFound
-		}
-		return jwt.ParseSigned(raw)
 	}
 }
