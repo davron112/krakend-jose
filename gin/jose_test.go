@@ -9,10 +9,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/davron112/lura/v2/logging"
+	"github.com/davron112/lura/v2/proxy"
+	ginlura "github.com/davron112/lura/v2/router/gin"
 	"github.com/gin-gonic/gin"
-	"github.com/luraproject/lura/v2/logging"
-	"github.com/luraproject/lura/v2/proxy"
-	ginlura "github.com/luraproject/lura/v2/router/gin"
 )
 
 func TestTokenSignatureValidator(t *testing.T) {

@@ -1,11 +1,11 @@
-module github.com/krakendio/krakend-jose/v2
+module github.com/davron112/krakend-jose/v2
 
 go 1.17
 
 require (
 	github.com/auth0-community/go-auth0 v1.0.0
+	github.com/davron112/lura/v2 v2.0.5
 	github.com/gin-gonic/gin v1.7.7
-	github.com/luraproject/lura/v2 v2.0.5
 	gocloud.dev v0.25.0
 	gocloud.dev/secrets/hashivault v0.25.0
 	gopkg.in/square/go-jose.v2 v2.6.0
@@ -43,6 +43,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/sts v1.16.3 // indirect
 	github.com/aws/smithy-go v1.11.2 // indirect
 	github.com/cenkalti/backoff/v3 v3.2.2 // indirect
+	github.com/davron112/flatmap v1.1.1 // indirect
 	github.com/dimchansky/utfbom v1.1.1 // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
@@ -77,7 +78,6 @@ require (
 	github.com/hashicorp/yamux v0.0.0-20211028200310-0bc27b27de87 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/krakendio/flatmap v1.1.1 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
@@ -110,6 +110,6 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
-replace github.com/auth0-community/go-auth0 v1.0.0 => github.com/devopsfaith/go-auth0 v0.0.0-20220422124632-a1358a81b559
+replace github.com/auth0-community/go-auth0 v1.0.0 => github.com/davron112/go-auth0 v0.0.0-20220422124632-a1358a81b559
 
 replace github.com/dgrijalva/jwt-go v3.2.0+incompatible => github.com/golang-jwt/jwt v3.2.1+incompatible

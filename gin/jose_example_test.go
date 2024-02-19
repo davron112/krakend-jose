@@ -10,12 +10,12 @@ import (
 	"strings"
 	"time"
 
+	krakendjose "github.com/davron112/krakend-jose/v2"
+	"github.com/davron112/lura/v2/config"
+	"github.com/davron112/lura/v2/logging"
+	"github.com/davron112/lura/v2/proxy"
+	ginlura "github.com/davron112/lura/v2/router/gin"
 	"github.com/gin-gonic/gin"
-	krakendjose "github.com/krakendio/krakend-jose/v2"
-	"github.com/luraproject/lura/v2/config"
-	"github.com/luraproject/lura/v2/logging"
-	"github.com/luraproject/lura/v2/proxy"
-	ginlura "github.com/luraproject/lura/v2/router/gin"
 )
 
 func Example_RS256() {

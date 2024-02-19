@@ -19,9 +19,8 @@ import (
 	"time"
 
 	auth0 "github.com/auth0-community/go-auth0"
+	"github.com/davron112/krakend-jose/v2/secrets"
 	jose "gopkg.in/square/go-jose.v2"
-
-	"github.com/krakendio/krakend-jose/v2/secrets"
 )
 
 type SecretProviderConfig struct {
