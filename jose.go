@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/davron112/go-auth0"
 	"github.com/davron112/lura/v2/proxy"
+	"github.com/krakend/go-auth0"
 	jose "gopkg.in/square/go-jose.v2"
 	"gopkg.in/square/go-jose.v2/jwt"
 )

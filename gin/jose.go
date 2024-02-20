@@ -7,13 +7,13 @@ import (
 	"regexp"
 	"strings"
 
-	auth0 "github.com/davron112/go-auth0"
 	krakendjose "github.com/davron112/krakend-jose/v2"
 	"github.com/davron112/lura/v2/config"
 	"github.com/davron112/lura/v2/logging"
 	"github.com/davron112/lura/v2/proxy"
 	ginlura "github.com/davron112/lura/v2/router/gin"
 	"github.com/gin-gonic/gin"
+	auth0 "github.com/krakend/go-auth0"
 	"gopkg.in/square/go-jose.v2/jwt"
 )
 

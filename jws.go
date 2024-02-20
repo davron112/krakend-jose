@@ -6,14 +6,14 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/davron112/go-auth0"
 	"github.com/davron112/lura/v2/config"
+	"github.com/krakend/go-auth0"
 	jose "gopkg.in/square/go-jose.v2"
 )
 
 const (
-	ValidatorNamespace = "github.com/devopsfaith/krakend-jose/validator"
-	SignerNamespace    = "github.com/devopsfaith/krakend-jose/signer"
+	ValidatorNamespace = "github.com/davron112/krakend-jose/validator"
+	SignerNamespace    = "github.com/davron112/krakend-jose/signer"
 	defaultRolesKey    = "roles"
 )
 
